@@ -10,6 +10,8 @@ import SnapKit
 
 class ResultViewController: UIViewController {
     
+// MARK: - Outlets
+    
     let titleLabel: UILabel = {
         let title = UILabel()
         title.text = "Total Bill"
@@ -43,6 +45,8 @@ class ResultViewController: UIViewController {
         return button
     }()
     
+// MARK: - Init Views
+    
     let descriptionView = DescriptionView()
     
     override func viewDidLoad() {
@@ -51,6 +55,8 @@ class ResultViewController: UIViewController {
         setConstrains()
         cancelButtonTapped()
     }
+    
+// MARK: - Methods
     
     
     private func setupViews() {
@@ -65,8 +71,9 @@ class ResultViewController: UIViewController {
     @objc func cancelButtonTapped() {
         dismiss(animated: true)
     }
-    
 }
+
+// MARK: - Constrains
 
 extension ResultViewController {
     private func setConstrains() {

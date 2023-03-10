@@ -10,6 +10,8 @@ import UIKit
 
 class MainViewController: UIViewController {
     
+// MARK: - Outlets
+    
     let titleLabel: UILabel = {
         let label = UILabel()
         label.textColor = .black
@@ -46,6 +48,8 @@ class MainViewController: UIViewController {
         button.addTarget(self, action: #selector(calculateButtonTapped), for: .touchUpInside)
         return button
     }()
+    
+// MARK: - Init Views
     
     let totalBillView = TotalBillView()
     let personsView = PersonsView()
@@ -88,6 +92,8 @@ class MainViewController: UIViewController {
     }
     
 }
+
+// MARK: - Constrains
 
 extension MainViewController {
     private func setConstraints() {
@@ -133,6 +139,8 @@ extension MainViewController {
         }
     }
 }
+
+// MARK: - Alert Controller
 
 extension MainViewController {
     private func showAlert(title: String, message: String) {
